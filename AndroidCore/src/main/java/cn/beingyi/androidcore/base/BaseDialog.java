@@ -30,7 +30,7 @@ public abstract class BaseDialog {
 
         dialog.setCancelable(true);
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-        if(config.isHasBgShadow()) {
+        if(!config.isHasBgShadow()) {
             dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         }
         dialog.setContentView(getContentView());
