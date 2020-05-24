@@ -116,7 +116,9 @@ public class UpdateDialog implements View.OnClickListener {
         if (config.getVersionCode() > SelfInfo.getVersionCode(context)) {
             dialog.show();
         } else {
-            ToastUtils.show("当前已是最新版本");
+            if(config.isTip()) {
+                ToastUtils.show("当前已是最新版本");
+            }
         }
     }
 

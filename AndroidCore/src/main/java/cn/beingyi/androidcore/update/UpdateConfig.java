@@ -15,6 +15,7 @@ public class UpdateConfig {
     boolean isForceUpdate;
     String downloadUrl;
     File saveFilePath;
+    boolean isTip;
 
 
     public String getTitle() {
@@ -71,5 +72,13 @@ public class UpdateConfig {
 
     public void setSaveFilePath(File saveFilePath) {
         this.saveFilePath = saveFilePath;
+    }
+
+    public boolean isTip() {
+        return isTip;
+    }
+
+    public void setTip(boolean tip) {
+        isTip = tip;
     }
 }
