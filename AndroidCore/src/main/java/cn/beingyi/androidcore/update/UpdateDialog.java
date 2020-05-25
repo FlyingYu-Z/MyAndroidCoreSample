@@ -117,7 +117,7 @@ public class UpdateDialog implements View.OnClickListener {
             dialog.show();
         } else {
             if(config.isTip()) {
-                ToastUtils.show("当前已是最新版本");
+                ToastUtils.show(context.getString(R.string.latest_version_tip));
             }
         }
     }
@@ -172,12 +172,12 @@ public class UpdateDialog implements View.OnClickListener {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-                new alert(context,  "下载失败:"+ ex.toString());
+                new alert(context,  context.getString(R.string.download_failed)+ ex.toString());
             }
 
             @Override
             public void onCancelled(CancelledException cex) {
-                new alert(context,  "下载失败:"+ cex.toString());
+                new alert(context,  context.getString(R.string.download_failed)+ cex.toString());
             }
 
             @Override

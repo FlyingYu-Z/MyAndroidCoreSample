@@ -28,6 +28,11 @@ public class LoadingDialog extends ProgressDialog
 		super(context, R.style.CustomDialog);
 	}
 
+	public LoadingDialog(Context context)
+	{
+		super(context, R.style.CustomDialog);
+	}
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -79,8 +84,7 @@ public class LoadingDialog extends ProgressDialog
 	
 	
 	@Override
-	public void show()
-	{
+	public void show() {
 		//开启
 		super.show();
 		loadIng();
