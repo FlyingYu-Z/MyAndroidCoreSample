@@ -15,11 +15,12 @@ import cn.beingyi.androidcore.R;
 /**
  * created by zhengyu
  * on 2020/5/23
+ * 用于快速创建自定义对话框
  **/
 public abstract class BaseDialog {
 
 
-    Context context;
+    public Context context;
     Dialog dialog;
 
     public BaseDialog(Context context) {
@@ -76,7 +77,7 @@ public abstract class BaseDialog {
     }
 
 
-   public class Config{
+    public class Config{
         boolean hasBgShadow;
         int gravity;
 
