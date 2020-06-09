@@ -145,9 +145,7 @@ public class TextInputDialog {
     }
 
     public interface CallBack{
-
         void onSend(String msg, TextInputDialog dialog);
-
     }
 
 
