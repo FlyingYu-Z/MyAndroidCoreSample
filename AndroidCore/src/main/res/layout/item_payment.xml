@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/ImageView_icon"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_alipay"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+
+        <TextView
+            android:id="@+id/TextView_name"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.0"
+            android:textColor="@color/black"
+            android:text="支付宝"
+            android:gravity="center|left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/ImageView_isChecked"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_unchecked"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

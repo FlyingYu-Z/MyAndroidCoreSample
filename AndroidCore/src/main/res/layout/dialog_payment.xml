@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="10dp"
+    android:padding="0dp">
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="请选择支付方式"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/ImageView_close"
+                android:layout_margin="5dp"
+                android:layout_gravity="right|center"
+                android:src="@mipmap/ic_close"
+                android:tint="@color/black"
+                android:padding="5dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+        </FrameLayout>
+
+
+        <ListView
+            android:id="@+id/ListView_payment"
+            android:layout_weight="1.0"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+        <Button
+            android:id="@+id/Button_pay"
+            android:background="@drawable/bg_btn_pay"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="我选好了"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>
