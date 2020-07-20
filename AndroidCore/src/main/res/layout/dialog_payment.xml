@@ -37,7 +37,7 @@
                 android:id="@+id/ImageView_close"
                 android:layout_margin="5dp"
                 android:layout_gravity="right|center"
-                android:src="@mipmap/ic_close"
+                android:src="@drawable/ic_close"
                 android:tint="@color/black"
                 android:padding="5dp"
                 android:layout_width="20dp"

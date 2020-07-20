@@ -56,6 +56,7 @@ public class LoadingDialog extends ProgressDialog
 		params.height = WindowManager.LayoutParams.WRAP_CONTENT;
 		getWindow().setAttributes(params);
 
+		tv_msg.setText(msg);
 	}
 	
 	
