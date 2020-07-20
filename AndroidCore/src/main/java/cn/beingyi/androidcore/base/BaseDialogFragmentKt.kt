@@ -10,7 +10,7 @@ import androidx.fragment.app.DialogFragment
  * created by zhengyu
  * on 2020/6/9
  */
-abstract class BaseDialogFragment : DialogFragment() {
+abstract class BaseDialogFragmentKt : DialogFragment() {
     var rootView: View? = null
     abstract val contentView: Int
     abstract fun initView()
