@@ -52,8 +52,6 @@ public abstract class BaseDialog {
         dialog.getWindow().setAttributes(p);
         dialog.getWindow().setWindowAnimations(R.style.ActionSheetDialogAnimation);
 
-        onCreate();
-
     }
 
 
@@ -67,6 +65,7 @@ public abstract class BaseDialog {
 
     public void show(){
         dialog.show();
+        onCreate();
     }
     public void dismiss(){
         dialog.dismiss();

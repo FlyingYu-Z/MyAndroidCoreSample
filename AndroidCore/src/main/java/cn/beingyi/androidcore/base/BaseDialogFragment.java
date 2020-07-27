@@ -1,4 +1,4 @@
-package cn.beingyi.androidcore;
+package cn.beingyi.androidcore.base;
 
 import android.app.Activity;
 import android.os.Bundle;
