@@ -19,7 +19,6 @@ import cn.beingyi.androidcore.R;
  **/
 public abstract class BaseDialog {
 
-
     public Context context;
     Dialog dialog;
 
@@ -29,7 +28,7 @@ public abstract class BaseDialog {
 
         Config config=config();
 
-        dialog.setCancelable(true);
+        dialog.setCancelable(config.isCanCancelable());
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         if(!config.isHasBgShadow()) {
             dialog.getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
@@ -52,6 +51,33 @@ public abstract class BaseDialog {
         dialog.getWindow().setAttributes(p);
         dialog.getWindow().setWindowAnimations(R.style.ActionSheetDialogAnimation);
 
+    }
+
+    public void setHeight(int height){
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        ((Activity)context).getWindowManager().getDefaultDisplay().getMetrics(outMetrics);
+        int widthPixels = outMetrics.widthPixels;
+        int heightPixels = outMetrics.heightPixels;
+
+        WindowManager.LayoutParams p = dialog.getWindow().getAttributes();
+        p.gravity = Gravity.TOP;
+        p.height= height;
+        p.width= widthPixels;
+        dialog.getWindow().setAttributes(p);
+    }
+
+
+    public void setHeightX(int split){
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        ((Activity)context).getWindowManager().getDefaultDisplay().getMetrics(outMetrics);
+        int widthPixels = outMetrics.widthPixels;
+        int heightPixels = outMetrics.heightPixels;
+
+        WindowManager.LayoutParams p = dialog.getWindow().getAttributes();
+        p.gravity = Gravity.TOP;
+        p.height= heightPixels/split;
+        p.width= widthPixels;
+        dialog.getWindow().setAttributes(p);
     }
 
 
@@ -77,8 +103,9 @@ public abstract class BaseDialog {
 
 
     public class Config{
-        boolean hasBgShadow;
-        int gravity;
+        private boolean hasBgShadow;
+        private int gravity;
+        private boolean canCancelable;
 
         public boolean isHasBgShadow() {
             return hasBgShadow;
@@ -94,6 +121,14 @@ public abstract class BaseDialog {
 
         public void setGravity(int gravity) {
             this.gravity = gravity;
+        }
+
+        public boolean isCanCancelable() {
+            return canCancelable;
+        }
+
+        public void setCanCancelable(boolean canCancelable) {
+            this.canCancelable = canCancelable;
         }
     }
 
