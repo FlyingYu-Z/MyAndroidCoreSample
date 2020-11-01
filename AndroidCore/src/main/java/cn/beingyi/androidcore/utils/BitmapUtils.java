@@ -12,6 +12,7 @@ import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
 import cn.beingyi.androidcore.AndroidCore;
@@ -127,6 +128,31 @@ public class BitmapUtils
     }
 
 
+
+    /**
+     * 压缩图片
+     *
+     * @param bitmap
+     *          被压缩的图片
+     * @param sizeLimit
+     *          大小限制
+     * @return
+     *          压缩后的图片
+     */
+    public static Bitmap compressBitmap(Bitmap bitmap, long sizeLimit) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        int quality = 100;
+        bitmap.compress(Bitmap.CompressFormat.JPEG, quality, baos);
+        // 循环判断压缩后图片是否超过限制大小
+        while(baos.toByteArray().length / 1024 > sizeLimit) {
+            // 清空baos
+            baos.reset();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, quality, baos);
+            quality -= 10;
+        }
+        Bitmap newBitmap = BitmapFactory.decodeStream(new ByteArrayInputStream(baos.toByteArray()), null, null);
+        return newBitmap;
+    }
 
 
 
