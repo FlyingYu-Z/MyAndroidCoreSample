@@ -3,13 +3,14 @@ package cn.beingyi.androidcore.model;
 import android.app.Activity;
 import android.content.Context;
 
-import com.hbv.app.dialog.LoadingDialog;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+
+import cn.beingyi.androidcore.ui.LoadingDialog;
 
 /**
  * author: zhengyu
