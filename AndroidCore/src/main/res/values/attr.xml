@@ -17,4 +17,27 @@
         <attr name="mrl_rippleRoundedCorners" format="dimension" localization="suggested" />
     </declare-styleable>
 
+    <declare-styleable name="RippleMenuView">
+        <attr name="menuIcon" format="reference|color" localization="suggested" />
+        <attr name="menuIconWidth" format="dimension" localization="suggested">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="menuIconHeight" format="dimension" localization="suggested">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="menuLabel" format="string" localization="suggested" />
+        <attr name="labelTextColor" format="color|reference"  localization="suggested" />
+        <attr name="labelTextSize" format="dimension"  localization="suggested" />
+        <attr name="menuValue" format="string" localization="suggested" />
+        <attr name="hasArrow" format="boolean" localization="suggested" />
+        <attr name="parentPaddingLeft" format="dimension"/>
+        <attr name="parentPaddingTop" format="dimension"/>
+        <attr name="parentPaddingRight" format="dimension"/>
+        <attr name="parentPaddingBottom" format="dimension"/>
+    </declare-styleable>
+
 </resources>
