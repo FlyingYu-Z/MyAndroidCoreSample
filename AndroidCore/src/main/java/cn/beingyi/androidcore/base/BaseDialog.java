@@ -20,7 +20,7 @@ import cn.beingyi.androidcore.R;
 public abstract class BaseDialog {
 
     public Context context;
-    Dialog dialog;
+    private Dialog dialog;
 
     public BaseDialog(Context context) {
         this.context = context;
@@ -80,6 +80,9 @@ public abstract class BaseDialog {
         dialog.getWindow().setAttributes(p);
     }
 
+    public Dialog getDialog() {
+        return dialog;
+    }
 
     public abstract int getContentView();
 
