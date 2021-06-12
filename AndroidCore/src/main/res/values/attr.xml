@@ -19,6 +19,7 @@
 
     <declare-styleable name="RippleMenuView">
         <attr name="menuIcon" format="reference|color" localization="suggested" />
+        <attr name="menuIconColor" format="color|reference"  localization="suggested" />
         <attr name="menuIconWidth" format="dimension" localization="suggested">
             <enum name="fill_parent" value="-1" />
             <enum name="match_parent" value="-1" />

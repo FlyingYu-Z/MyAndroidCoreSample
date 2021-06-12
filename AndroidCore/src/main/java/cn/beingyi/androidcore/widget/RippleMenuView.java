@@ -2,6 +2,8 @@ package cn.beingyi.androidcore.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -91,6 +93,7 @@ public class RippleMenuView extends LinearLayout {
             img_arrow.setVisibility(INVISIBLE);
         }
 
+        int iconColor = array.getColor(R.styleable.RippleMenuView_menuIconColor, Color.BLACK);
         float iconWidth = array.getLayoutDimension(R.styleable.RippleMenuView_menuIconWidth, 0);
         float iconHeight = array.getLayoutDimension(R.styleable.RippleMenuView_menuIconHeight, 0);
 
@@ -99,6 +102,7 @@ public class RippleMenuView extends LinearLayout {
             lp.width = (int) iconWidth;
             lp.height = (int) iconHeight;
             img_icon.setLayoutParams(lp);
+            img_icon.setColorFilter(iconColor, PorterDuff.Mode.SRC_IN);
         }
         int labelTextColor = array.getColor(R.styleable.RippleMenuView_labelTextColor, 0);
         tv_label.setTextColor(labelTextColor);
