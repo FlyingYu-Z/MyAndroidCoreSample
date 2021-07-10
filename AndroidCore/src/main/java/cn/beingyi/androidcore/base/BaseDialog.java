@@ -49,7 +49,9 @@ public abstract class BaseDialog {
         //p.alpha = 0.9f;
         dialog.getWindow().setGravity(config.getGravity());
         dialog.getWindow().setAttributes(p);
-        dialog.getWindow().setWindowAnimations(R.style.ActionSheetDialogAnimation);
+        if(config.isShowAnim()) {
+            dialog.getWindow().setWindowAnimations(R.style.ActionSheetDialogAnimation);
+        }
 
     }
 
@@ -109,6 +111,7 @@ public abstract class BaseDialog {
         private boolean hasBgShadow;
         private int gravity;
         private boolean canCancelable;
+        private boolean showAnim;
 
         public boolean isHasBgShadow() {
             return hasBgShadow;
@@ -132,6 +135,15 @@ public abstract class BaseDialog {
 
         public void setCanCancelable(boolean canCancelable) {
             this.canCancelable = canCancelable;
+        }
+
+
+        public boolean isShowAnim() {
+            return showAnim;
+        }
+
+        public void setShowAnim(boolean showAnim) {
+            this.showAnim = showAnim;
         }
     }
 
