@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">MyAndroidCore</string>
     <string name="downloading">Downloading</string>
     <string name="cancel">Cancel</string>
     <string name="update">Update</string>
